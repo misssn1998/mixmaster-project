@@ -11,5 +11,16 @@
 11. create Navbar component, has NavLink to Home, About and Newsletter
 12. import styled components to use <Wrapper></Wrapper>
 13. finish adding h3 and p for About page
-14. doing Error page => import useRouteError
+14. doing Error page => using useRouteError() => having 2 cases: error.status === 400 / other cases
+15. fetch data from url 
+16. create loader for Landing page: response await links + searchTerm
+17. 
+- create pages/SinglePageError.jsx
+- export import (index.js)
+- use it in App.jsx
+18. 
+- in src/components create SearchForm, CocktailList, CocktailCard
+- render SearchForm and CocktailList in Landing
+- pass drinks, iterate over and render in CocktailCard
+19. return all information in CocktailCard using useOutletContext()
 
