@@ -1,12 +1,15 @@
-import { Outlet, Link } from "react-router-dom"
+import { Outlet, useNavigation } from "react-router-dom"
 import Navbar from "../components/Navbar"
 
 const HomeLayout = () => {
+  const navigation = useNavigation();
+  const isPageLoading = navigation.state === 'loading'
   return (
     <div>
       <Navbar />
       <section className="page">
-        <Outlet />
+        {/* if state is loading, display loading circle */}
+        {isPageLoading? <div className="loading"/> : <Outlet/>} 
       </section>
     </div>
   );

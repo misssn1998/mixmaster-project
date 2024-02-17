@@ -21,6 +21,21 @@
 18. 
 - in src/components create SearchForm, CocktailList, CocktailCard
 - render SearchForm and CocktailList in Landing
-- pass drinks, iterate over and render in CocktailCard
-19. return all information in CocktailCard using useOutletContext()
-
+- pass drinks from Landing page loader, iterate over in CocktailList => return id, name, image, info, glass => render in CocktailCard with key + pass item {...item}
+19. return all information in CocktailCard
+20. In Home page, use useNavigation() to know the page state (whether is loading or not loading) => display loading cicle if navigation.state === 'loading'
+21. For cocktail page:
+    - get url based on Id
+    - pass {params} to loader 
+    - pass {id} as {params}
+    - return data from axios url with {id}
+    - use useLoaderData() in function 
+    - pass data to singleDrink 
+    - filter validIngredients
+22. create newsletter page consisting of a form 
+    - use <Form> with post method
+    - create action function for form
+    - create toast mess after submiting form
+    - use try/catch if error occurs
+    - create navigation.state condition for submitting status
+23. do searchForm using searchParams
